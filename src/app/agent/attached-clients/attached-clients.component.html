@@ -1,3 +1,51 @@
-<p>
-  attached-clients works!
-</p>
+<div class="row">
+	<div class="col">
+		<section>
+			<header class="header">
+				<div class="row">
+					<div class="col-md-4">
+					<h1>Liste des Utilisateurs liés à l'agent 10</h1>
+					</div>			
+					<div class="col-md-6">						
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-primary" (click)="redirectNewUserPage()">Créer utilisateur</button>
+					</div>		
+				</div>
+			</header>
+		</section>
+
+		<section class="main">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Preom</th>
+						<th>Nom</th>
+						<th>Pseudo</th>
+						<th>Adresse</th>
+						<th>Email</th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr *ngFor="let user of users">
+						<th scope="row">{{user.id}}</th>
+						<td>{{user.prenom}}</td>
+						<td>{{user.nom}}</td>
+						<td>{{user.username}}</td>
+						<td>{{user.adress}}</td>
+						<td>{{user.email}}</td>
+						<td>
+							<button type="button" class="btn btn-warning" (click)="editUserPage(user)">Editer utilisateur</button>
+							<button type="button" class="btn btn-danger" (click)="deleteUser(user)">Supprimer utilisateur</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</section>
+
+	</div>
+</div>
