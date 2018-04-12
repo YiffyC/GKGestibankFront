@@ -4,7 +4,7 @@
 			<header class="header">
 				<div class="row">
 					<div class="col-md-4">
-					<h1>Liste des Utilisateurs liés à l'agent 10</h1>
+					<h1>Liste des Utilisateurs liés à l'agent {{agent.prenom}}</h1>
 					</div>			
 					<div class="col-md-6">						
 					</div>
@@ -39,7 +39,7 @@
 						<td>{{user.email}}</td>
 						<td>
 							<button type="button" class="btn btn-warning" (click)="editUserPage(user)">Editer utilisateur</button>
-							<button type="button" class="btn btn-danger" (click)="deleteUser(user)">Supprimer utilisateur</button>
+							<button type="button" class="btn btn-info" (click)="comptesUserPage(user)">Voir les comptes</button>
 						</td>
 					</tr>
 				</tbody>
