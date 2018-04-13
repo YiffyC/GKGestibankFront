@@ -51,7 +51,7 @@ export class AttachedClientsComponent implements OnInit
 	{
 		if(user)
 		{
-			this.router.navigate(['/user/accounts', user.id]);
+			this.router.navigate(['/user/accounts/', user.id]);
 		}
 	}
 
